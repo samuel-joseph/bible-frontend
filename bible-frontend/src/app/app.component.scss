@@ -1,0 +1,76 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+
+  button {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a5d84;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.fade-button {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.blessing-message {
+  text-align: center;
+  margin-top: 3rem;
+  font-family: 'Georgia', serif;
+  animation: fadeInBlessing 1s ease-in;
+  color: #2e7d32; // a calm, spiritual green
+}
+
+@keyframes fadeInBlessing {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.intro-message {
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  color: #2e7d32;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation ease 1.5s forwards;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}

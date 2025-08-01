@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  color: #333;
+  background-color: #fafafa;
+  line-height: 1.6;
+}
+
+h1, h2, h3, button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #2a5d84;
+}
+
+
+button {
+  letter-spacing: 0.5px;
+}

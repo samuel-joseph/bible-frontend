@@ -1,0 +1,31 @@
+<div class="reader-container">
+  <h2>{{ title }}</h2>
+
+  <!-- Book dropdown (only if book list exists) -->
+  <div *ngIf="!selectedBook && books">
+    <label for="book">Select a Book:</label>
+    <select id="book" (change)="onBookSelect($event)">
+      <option value="">-- Choose a book --</option>
+      <option *ngFor="let book of books" [value]="book">{{ book }}</option>
+    </select>
+  </div>
+
+<div *ngIf="isLoading" class="loading-message">
+  🙏 Please be patient — the app is working, the server is just waking up.<br>
+  This may take a few seconds the first time.
+</div>
+
+  <!-- Display verses -->
+  <div *ngIf="!isLoading && verse" class="verse-container">
+    <h3>{{ verse.reference }}</h3>
+    <div *ngFor="let v of verse.verses">
+      <p style="white-space: pre-line;"><strong>{{ v.verse }}.</strong> {{ v.text }}</p>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="button-group">
+    <button *ngIf="hasSavedProgress && books" (click)="clearProgress()">Clear Book</button>
+    <button (click)="closeComponent()">Back</button>
+  </div>
+</div>
